@@ -1,0 +1,224 @@
+body {
+    margin: 30px;
+    background-color: var(--color-white);
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 3vw auto max-content max-content;
+    gap: 20px;
+}
+
+#logo {
+    width: 100%;
+}
+
+#company-name {
+    margin-left: 1vw;
+    font-family: subtitleFont;
+    font-size: 2vw;
+    color: var(--color-black);
+}
+
+#login a, #register a {
+    color: var(--color-black);
+    all: unset;
+    font-family: normalFont;
+    font-size: 1.6vw;
+    margin-right: 5vw;
+    cursor: pointer;
+}
+
+#login a:hover, #register a:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+}
+
+.selectet-tab {
+    text-decoration: underline;
+    color: var(--color-highlight);
+}
+
+.item.v-center {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 3vw - 100px);
+}
+
+.content > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1.5vw;
+}
+
+#login-form div:nth-child(1) {
+    font-family: titleFont;
+    font-size: 3vw;
+    color: var(--color-black);
+}
+
+#login-form div:nth-child(2) {
+    font-family: textFont;
+    font-size: 2vw;
+    margin-bottom: 4vw;
+    color: var(--color-black);
+}
+
+#login-form button {
+    font-family: subtitleFont;
+    font-size: 1.2vw;
+    color: var(--color-white);
+    background-color: var(--color-highlight);
+
+    padding: 0.7vw 2vw;
+    border-radius: 100px;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+#login-form input {
+    font-family: subtitleFont;
+    font-size: 1.2vw;
+    color: var(--color-black);
+
+    padding: 0.7vw 2vw;
+    border-radius: 100px;
+    border: 2px solid var(--color-black);
+    width: 70%;
+
+    transition: 0.2s;
+    background-color: var(--color-white);
+}
+
+#login-form input:hover {    
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+#login-form input::placeholder {
+    color: var(--color-black);
+}
+
+#triangle {
+    position: absolute;
+    width: 20vw;
+    left: 20vw;
+    top: 10vw;
+
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+}
+
+#img {
+    user-select: none;
+    pointer-events: none;
+    width: 30vw;
+}
+
+@media (max-width: 800px) {
+    .content {
+        grid-template-columns: 1fr;
+        height: calc(100vh - 3vw - 150px);
+    }
+
+    .content > div:nth-child(2) {
+        order: -1;
+    }
+
+    #img {
+        width: 40vw;
+    }
+
+    #login-form {
+        gap: 4vw;
+    }
+
+    #login-form div:nth-child(1) {
+        font-family: titleFont;
+        font-size: 6vw;
+    }
+    
+    #login-form div:nth-child(2) {
+        font-family: textFont;
+        font-size: 5vw;
+        margin-bottom: 4vw;
+    }
+    
+    #login-form button {
+        font-family: subtitleFont;
+        font-size: 3vw;
+        color: var(--color-white);
+        background-color: var(--color-highlight);
+    
+        padding: 1.5vw 2vw;
+        border-radius: 100px;
+        border: none;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    
+    #login-form button:hover {
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+    
+    #login-form input {
+        font-family: subtitleFont;
+        font-size: 3vw;
+        color: var(--color-black);
+    
+        padding: 1.5vw 2vw;
+        border-radius: 100px;
+        border: 2px solid var(--color-black);
+        width: 70%;
+    
+        transition: 0.2s;
+    }
+
+    #triangle {
+        width: 30vw;
+        left: 30vw;
+        top: 65vw;
+    }
+
+    .content > div:nth-child(1) {
+        align-items: normal;
+    }
+
+    .header {
+        grid-template-columns: 8vw auto min-content;
+    }
+
+    .header > * {
+        justify-content: end;
+    }
+
+    #company-name {
+        display: none;
+    }
+
+    #login a, #register a {
+        font-size: 4vw;
+        margin-right: 3vw;
+    }
+}

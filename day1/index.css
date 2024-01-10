@@ -1,0 +1,27 @@
+@font-face {
+    font-family: titleFont;
+    src: url(fonts/ArchivoBlack-Regular.ttf);
+}
+
+@font-face {
+    font-family: subtitleFont;
+    src: url(fonts/ArchivoNarrow-Bold.ttf);
+}
+
+@font-face {
+    font-family: normalFont;
+    src: url(fonts/ArchivoNarrow-Regular.ttf);
+}
+
+@font-face {
+    font-family: textFont;
+    src: url(fonts/Arapey-Regular.ttf);
+}
+
+:root {
+    color-scheme: only light;
+
+    --color-black: #212427;
+    --color-white: #f0f0f0;
+    --color-highlight: #FF914D;
+}
