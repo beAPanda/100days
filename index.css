@@ -1,0 +1,99 @@
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+body {
+    margin: 0;
+}
+
+.landing-page {
+    height: 100vh;
+
+    background-color: #2e2f34;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    margin: 0;
+
+    color: #f0f0f0;
+    font-size: 8vw;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 0;
+
+    color: #f0f0f0;
+    font-size: 6vw;
+}
+  
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 0.5vw;
+  display: flex;
+  height: 100px;
+  width: 50vw;
+
+  box-shadow: 10px 10px 10px #141414;
+}
+
+#progress-value {
+  font-size: 3vw;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+
+  color: white;
+  text-shadow: 10px 10px 10px #141414;
+  mix-blend-mode: difference;
+}
+
+#progress-bar {
+  animation: load 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 80%;
+  width: 0;
+}
+  
+@keyframes load {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 50%;
+  }
+}
+
+.content {
+  background-color: #34353a;
+  padding: 100px;
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 150px;
+}
+
+.item {
+  background-color: antiquewhite;
+  aspect-ratio: 16 / 9;
+  box-shadow: 10px 10px 10px #141414;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
